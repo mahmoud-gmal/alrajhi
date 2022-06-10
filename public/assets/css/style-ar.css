@@ -1,0 +1,110 @@
+html,
+body {
+    direction: rtl;
+}
+
+form {
+    direction: rtl;
+}
+
+.footer-bottom .ryad-logo {
+    /* float: left; */
+}
+
+.home-slider .item {
+    direction: rtl;
+}
+
+.lavalamp-bar {
+    /* left: auto; */
+    right: 30px;
+    margin-inline-start: 58px;
+    transform: scale(-1);
+}
+
+.readMore::after {
+    right: auto;
+    left: 0;
+    /* top: 0; */
+}
+
+.readMore i {
+    transform: scaleX(-1);
+}
+
+.video-block::before,
+.video-block::after {
+    right: auto;
+    left: 0;
+    border-left: 2px #fff solid;
+    border-right: 0;
+}
+
+.video-block::after {
+    right: 0;
+    left: auto;
+    /* transform: none; */
+}
+
+.footer-col .links-f li a::after {
+    left: auto;
+    right: 0;
+    transform: scaleX(-1) translateX(-28px);
+}
+
+.footer-col .links-f li a:hover::after {
+    transform: scaleX(-1) translateX(0);
+}
+
+.breadcrumb .text-bread ul li a::after {
+    right: auto;
+    left: -17px;
+}
+
+.pagination .page-item:last-child .page-link i {
+    transform: scaleX(-1);
+}
+
+.nice-select:after {
+    right: auto;
+    left: 20px;
+}
+
+.form-contact .form-group i {
+    right: auto;
+    left: 0;
+}
+
+.search-popup .form-group input[type="submit"],
+.search-popup .form-group button {
+    right: auto;
+    left: 30px;
+}
+
+.home-slider.owl-carousel .owl-nav,
+.home-slider .owl-dots {
+    right: auto;
+    left: 5%;
+}
+
+.slider-h .slider-counter {
+    right: auto;
+    left: 5.5%;
+}
+
+.btn i {
+    transform: scaleX(-1);
+}
+
+.pro-block {
+    direction: rtl;
+}
+
+.box-item {
+    direction: rtl;
+}
+
+.text-manger .name-manger::after {
+    right: auto;
+    left: 0;
+}

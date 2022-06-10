@@ -16,29 +16,13 @@ import "../public/assets/css/404.css";
 
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
-import Script from 'next/script';
+
 
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <Header />
-      <Script 
-        id="my-script"
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
-      <Script
-      id="my-script-2"  
-       strategy="lazyOnload">
-         {`
-          window.dataLayer = window.dataLayer || [];
-          dataLayer.push({
-              'gtm.start': new Date().getTime(),
-              event: 'gtm.js'
-          });    
-         `}
-       </Script>
       <Component {...pageProps} />
       <Footer />
     </>

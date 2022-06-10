@@ -1,9 +1,6 @@
-@media (max-width: 1200px) {
-    html,
-    body {
-        overflow-x: hidden;
-    }
-}
+@media (min-width: 1500px) {}
+
+@media (max-width: 1200px) {}
 
 @media (max-width: 1024px) {}
 
@@ -82,194 +79,279 @@
         max-width: 100%;
         flex: auto;
     }
-    header .header-inner .nav-menu {
+    .nav-inner {
         display: none;
     }
-    header .header-inner .menu-right {
-        max-width: 40%;
-        flex: 0 0 40%;
-    }
-    header .header-inner .menu-left {
-        max-width: 60%;
-        flex: 0 0 60%;
-    }
-    header .header-inner .menu-left .btn {
-        min-width: 100px;
-        font-size: 13px;
-        min-height: 35px;
-        line-height: 23px;
-    }
-    .mobile-nav-toggler {
+    .menu-left .mobile-nav-toggler {
         display: block;
-        width: 35px;
-        height: 35px;
-        line-height: 38px;
-        margin-inline-end: 8px;
     }
-    header .header-inner .menu-right a .icon {
-        width: 50px;
-        height: 76px;
+    .header-in .menu-left {
+        gap: 10px;
     }
-    header .header-inner .menu-right a .text-logo {
-        width: calc(100% - 50px);
-        padding-inline-start: 10px;
+    .slider-block .text-slider h1 {
+        font-size: 30px;
+        line-height: 1.5;
     }
-    header .header-inner .menu-right a .text-logo h3 {
-        font-size: 15px;
-        line-height: 24px;
+    .slider-block .text-slider {
+        min-height: auto;
+        margin-top: 90px;
     }
-    header .header-inner .menu-right a .text-logo h4 {
-        font-size: 10px;
-        line-height: 14px;
+    .btn-s {
+        gap: 10px;
+        flex-wrap: wrap;
     }
-    .banner-home,
-    .banner-home .row {
-        min-height: 568px;
+    .btn-s .btn {
+        min-width: 120px;
+        min-height: 45px;
+        padding: 10px;
+        font-size: 16px;
+        margin: 0;
     }
-    .about-h {
+    .home-slider .owl-dots,
+    .home-slider.owl-carousel .owl-nav,
+    .home-slider.owl-carousel .owl-nav {
+        display: none;
+    }
+    .slider-block,
+    .slider-block .row {
+        min-height: 450px;
+    }
+    .about-h,
+    .projects-h {
         padding: 50px 0;
     }
     .img-about {
-        margin-top: 30px;
+        height: 300px;
+        margin: 0 0 30px;
     }
-    .products-h {
-        padding: 50px 0 150px;
+    .about-block .title-about h3 {
+        font-size: 20px;
+    }
+    .about-block .title-about {
+        margin: 0 0 17px;
+    }
+    .about-block .text-about p {
+        font-size: 15px;
+        margin: 17px 0;
+        max-height: 135px;
+    }
+    .btn {
+        min-width: 120px;
+        min-height: 45px;
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+    .animation-rotate {
+        display: none;
+    }
+    .title h3 {
+        font-size: 25px;
+    }
+    .title p {
+        font-size: 14px;
+        margin: 15px auto 0;
     }
     .title {
-        margin: 0 0 30px;
+        margin: 0 0 20px;
     }
-    .contact-text {
-        padding: 30px 20px;
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel .owl-nav button.owl-next {
+        width: 45px;
+        height: 45px;
+        font-size: 19px;
     }
-    .contact-text p {
-        font-size: 22px;
-        line-height: 37px;
+    .owl-carousel .owl-nav button.owl-next {
+        right: 0;
     }
-    .contact-text .callNow .icon {
-        font-size: 40px;
-        width: 40px;
+    .owl-carousel .owl-nav button.owl-prev {
+        left: 0;
     }
-    .contact-text .callNow .details {
-        width: calc(100% - 40px);
-        padding-inline-start: 15px;
+    .btn i {
+        margin-inline-start: 5px;
     }
-    .contact-text .callNow .details h4 {
-        font-size: 18px;
-        line-height: 30px;
-        margin: 0;
-    }
-    .contact-text .callNow .details h3 {
-        font-size: 18px;
-        margin: 0;
-    }
-    .categories-h {
-        padding: 50px 0;
-    }
-    .footer-col h3 {
-        margin: 28px 0;
-    }
-    .footer-top .col-md-6.col-sm-12 {
-        max-width: 50%;
-    }
-    .footer-botto {
-        text-align: center;
-        padding: 0 0 16px;
-    }
-    .ryad-logo {
-        float: none;
-        margin: 10px 0 0;
-    }
-    .footer-top {
-        padding: 40px 0 30px;
-    }
-    .logo-f {
-        text-align: start;
-    }
-    .logo-f a .icon {
-        margin: 0;
-    }
-    .breadcrumb {
-        height: 250px;
-    }
-    .breadcrumb .text-bread h2 {
-        font-size: 25px;
-        line-height: 35px;
-        margin: 0 0 10px;
-    }
-    .breadcrumb .text-bread ul li a,
-    .breadcrumb .text-bread ul li span {
-        font-size: 15px;
-        line-height: 23px;
-    }
-    .img-about.img-in .img {
-        width: 290px;
-        height: 290px;
-    }
-    .img-about.img-in::after {
-        width: 300px;
-        height: 300px;
-        right: -2px;
-        top: -10px;
-    }
-    .img-about.img-in {
-        min-height: 300px;
-    }
-    .why-inner .why-block {
-        width: 216px;
-        height: 216px;
-        margin: 0;
-    }
-    .why-inner .why-block .counter-item {
-        font-size: 50px;
-        line-height: 75px;
-    }
-    .why-inner .why-block p {
-        font-size: 20px;
-        line-height: 25px;
-    }
-    .why-inner .text-why {
-        width: 100%;
-        padding: 30px 0 0;
-    }
-    .why-inner .text-why h3 {
-        font-size: 25px;
-        line-height: 40px;
-        margin: 0 0 10px;
-    }
-    .why-inner .text-why p {
-        margin: 15px 0;
-        font-size: 14px;
-        line-height: 22px;
-    }
-    .counter-h .row {
-        padding: 30px;
-    }
-    .count-block {
-        margin: 15px 0;
+    .projects-h .btn {
+        margin: 20px auto 0;
     }
     .counter-h {
-        padding: 40px 0;
+        padding: 20px 0 50px;
     }
-    .team-h {
-        padding: 10px 0 50px;
+    .count-block {
+        margin: 15px auto;
+        max-width: 300px;
     }
-    .serv-block .details .btn {
-        transform: translateY(10px);
-        opacity: 1;
+    .news-h {
+        padding: 30px 0 50px;
     }
-    .nav-pills .nav-item {
-        width: 100%;
-        margin: 5px 0;
-    }
-    .products-rate {
-        padding: 0 0 50px;
-    }
-    .form-con {
+    .news-h .title {
         margin: 0 0 30px;
     }
-    .img-con::after {
-        width: 150px;
-        height: 150px;
+    .news-h .btn {
+        margin: 20px auto 0;
+    }
+    .clients-h {
+        padding: 30px 0;
+    }
+    .title-clients h3 {
+        font-size: 18px;
+    }
+    .footer-col h3 {
+        margin: 20px 0;
+    }
+    .footer-bottom {
+        text-align: center;
+    }
+    .footer-bottom .row {
+        flex-direction: column-reverse;
+    }
+    .capy-right {
+        justify-content: center;
+    }
+    .capy-right p {
+        font-size: 15px;
+    }
+    .breadcrumb {
+        min-height: 200px;
+    }
+    .breadcrumb .text-bread {
+        padding-bottom: 50px;
+    }
+    .breadcrumb .text-bread h1 {
+        font-size: 22px;
+    }
+    .body-inner {
+        padding: 50px 0;
+    }
+    .img-about-in {
+        height: 300px;
+        margin-top: 30px;
+    }
+    .img-about-in .img {
+        max-width: 286px;
+        height: 280px;
+    }
+    .about-more {
+        padding: 40px 0;
+    }
+    .block-about-in {
+        padding: 20px;
+    }
+    .block-about-in .title-block .icon {
+        width: 45px;
+        height: 39px;
+        font-size: 20px;
+    }
+    .block-about-in .title-block h3 {
+        width: calc(100% - 45px);
+        padding-inline-start: 10px;
+        font-size: 18px;
+    }
+    .block-about-in .title-block {
+        margin: 0 0 15px;
+    }
+    .block-about-in .details p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+    .object-h {
+        padding: 50px 0;
+    }
+    .all-object .item .object-block .details p {
+        font-size: 13px;
+    }
+    .all-object .item .object-block .num {
+        width: 50px;
+        height: 50px;
+        margin-inline-end: -25px;
+    }
+    .all-object .item .object-block .details {
+        width: calc(100% - 25px);
+        padding: 10px;
+        padding-inline-start: 35px;
+    }
+    .manger-h {
+        padding: 0 0 50px;
+    }
+    .img-manger {
+        height: 277px;
+        margin: 0 0 30px;
+    }
+    .text-manger .name-manger h3 {
+        font-size: 17px;
+        margin: 0 0 5px;
+    }
+    .text-manger .name-manger span {
+        font-size: 14px;
+    }
+    .text-manger .words-manger {
+        min-height: 200px;
+        padding: 15px;
+    }
+    .text-manger .words-manger p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    .text-manger .name-manger {
+        margin: 0 0 15px;
+        padding-inline-end: 25px;
+    }
+    .text-manger .name-manger::after {
+        font-size: 20px;
+    }
+    .single-block {
+        height: auto;
+    }
+    .multi-step-form fieldset {
+        padding: 15px;
+    }
+    .all-choose .all-choose-in .item {
+        max-width: 95%;
+    }
+    .all-choose .all-choose-in .item input {
+        width: 15px;
+        height: 15px;
+    }
+    .all-choose .all-choose-in .item .title-item {
+        width: calc(100% - 15px);
+        padding-inline-start: 10px;
+    }
+    .all-choose .all-choose-in .item .title-item span {
+        font-size: 13px;
+    }
+    .all-choose {
+        padding: 10px;
+    }
+    .all-choose .all-choose-in .item {
+        padding: 12px 0;
+    }
+    .main-page.body-inner {
+        padding-top: 90px;
+    }
+    .step-block-in.multi-step-form h3 {
+        padding: 20px;
+        font-size: 18px;
+    }
+    .form-main2 {
+        padding: 20px;
+    }
+    .info-bottom-main {
+        padding: 20px 0 0;
+    }
+    .info-bottom-main .callNow i {
+        width: 30px;
+        height: 30px;
+    }
+    .info-bottom-main .callNow span {
+        font-size: 14px;
+        width: calc(100% - 30px);
+    }
+    .info-bottom-main .fh-f {
+        justify-content: start;
+        margin-top: 20px;
+    }
+    .info-bottom-main .callNow,
+    .info-bottom-main .fh-f {
+        justify-content: center;
+        text-align: center;
     }
 }
 
@@ -281,171 +363,34 @@
     .container {
         max-width: 100%;
     }
-    header .header-inner .menu-right,
-    header .header-inner .menu-left {
-        max-width: 50%;
-        flex: 0 0 50%;
+    .news-slider .item {
+        padding: 0;
     }
-    .banner-home .text-banner p {
-        font-size: 25px;
-        line-height: 1.7;
+    .projects-slider .item {
+        padding: 0;
     }
-    .text-about h3 {
-        font-size: 25px;
-        line-height: 40px;
-        margin: 0 0 20px;
-    }
-    .text-about p {
-        margin: 20px 0;
-        font-size: 14px;
-        line-height: 24px;
-        max-height: 96px;
-    }
-    .text-about ul li {
-        font-size: 14px;
-        line-height: 24px;
-        padding-inline-start: 20px;
-        margin: 5px 0;
-        flex: auto;
-        max-width: 100%;
-        padding-inline-end: 10px;
-    }
-    .text-about ul li::before {
-        font-size: 17px;
-    }
-    .img-about {
-        min-height: 350px;
-    }
-    .img-about .img {
-        width: 45%;
-        height: 300px;
-    }
-    .img-about::before {
-        width: 273px;
-        height: 273px;
-    }
-    .img-about::after {
-        width: 202px;
-        height: 202px;
-    }
-    .title h3 {
-        font-size: 25px;
-        line-height: 41px;
-    }
-    .title p {
-        font-size: 14px;
-        line-height: 20px;
-    }
-    .btn.btn-center {
-        margin: 30px auto 0;
-    }
-    .contact-text {
-        /* text-align: center; */
-    }
-    .contact-text .callNow .details {
-        width: auto;
-        text-align: start;
-    }
-    .contact-text .callNow {
-        /* justify-content: center; */
-    }
-    .logo-f a .icon {
-        max-width: 66px;
-        max-height: 66px;
-    }
-    .logo-f a .text-logo {
-        padding: 10px 0 0;
-    }
-    .logo-f a .text-logo h3 {
-        font-size: 20px;
-        line-height: 26px;
-    }
-    .logo-f a .text-logo h4 {
-        font-size: 11px;
-    }
-    .footer-col h3 {
-        font-size: 18px;
-        margin: 20px 0;
-    }
-}
-
-@media (max-width: 500px) {}
-
-@media (max-width: 480px) {
-    header {
-        padding: 15px 0;
-    }
-    header .header-inner .menu-left .btn {
-        min-width: 70px;
-        font-size: 10px;
-        min-height: 30px;
-        line-height: 30px;
-        height: auto;
-        padding: 0 5px;
-    }
-    .mobile-nav-toggler {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-    }
-    header .header-inner .menu-right a .text-logo h3 {
-        font-size: 12px;
-    }
-    header .header-inner .menu-right a .text-logo h4 {
-        font-size: 8px;
-    }
-    header .header-inner .menu-right a .icon {
-        width: 40px;
-        height: 55px;
-    }
-    header .header-inner {
-        padding: 10px;
-    }
-    header .header-inner .menu-right a .text-logo {
-        width: calc(100% - 40px);
-        padding-inline-start: 8px;
-    }
-    header .header-inner .menu-right {
-        max-width: 55%;
-        flex: 0 0 55%;
-    }
-    header .header-inner .menu-left {
-        max-width: 45%;
-        flex: 0 0 45%;
-    }
-    .banner-home,
-    .banner-home .row {
-        min-height: 450px;
-    }
-    .banner-home .text-banner {
-        padding: 0 0 90px;
-    }
-    .banner-home .text-banner p {
-        font-size: 20px;
-    }
-    .cat-block {
+    .pro-block {
         height: 350px;
     }
+    .clip-text {
+        font-size: 35px;
+    }
+    .logo-h .logo {
+        width: 100px;
+    }
+    header .menu-nav {
+        padding: 12px 0;
+    }
 }
 
-@media (max-width: 390px) {
-    .footer-top .col-md-6.col-sm-12 {
-        max-width: 100%;
-    }
-    .img-about .img {
-        height: 220px;
-    }
-    .img-about {
-        min-height: 290px;
-    }
-    .img-about::before {
-        width: 254px;
-        height: 254px;
-    }
-    .img-about::after {
-        width: 182px;
-        height: 182px;
+@media (max-width: 480px) {
+    .btn-s .btn {
+        font-size: 12px;
+        min-width: 95px;
+        min-height: 40px;
     }
 }
+
+@media (max-width: 390px) {}
 
 @media (max-width: 360px) {}

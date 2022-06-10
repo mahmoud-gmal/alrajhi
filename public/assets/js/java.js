@@ -1,10 +1,6 @@
 $(window).load(function() {
-    $('.loading').fadeOut(1000);
-    setInterval(function() {
-        $('body').addClass("animated")
-    }, 1000);
+    $('.loader').fadeOut(2000);
 });
-
 
 new WOW().init();
 wow = new WOW({
@@ -15,240 +11,116 @@ wow = new WOW({
     live: true // default
 })
 wow.init();
+
+
+// All Sliader
 $(document).ready(function() {
     "use strict";
 
-    /*---------------------------------------------
-    All Sliader
-    --------------------------------------------- */
-
 
     // Top Slider
-    $(".home-slider").owlCarousel({
-        nav: false,
+    $(".home-slider").on('initialized.owl.carousel changed.owl.carousel', function(e) {
+        if (!e.namespace) {
+            return;
+        }
+        var carousel = e.relatedTarget;
+        $('.slider-counter').html(carousel.relative(carousel.current()) + 1 + ("<div class='line'></div>") + carousel.items().length);
+    }).owlCarousel({
+        nav: true,
         loop: true,
-        navText: ["<i class='la la-angle-left'></i>", "<i class='la la-angle-right'></i>"],
+        navText: ["<i class='la la-angle-up'></i>", "<i class='la la-angle-down'></i>"],
         dots: true,
-        autoplay: 4000,
+        autoplay: true,
+        autoplayTimeout: 4000,
         items: 1,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
+        animateOut: 'animate__fadeIn',
+        animateIn: 'animate__fadeIn',
         autoplayHoverPause: true,
-        center: false,
+        responsiveClass: true
+    });
+
+    // Projects Slider 
+    $(".projects-slider").owlCarousel({
+        nav: true,
+        loop: true,
+        navText: ["<i class='las la-long-arrow-alt-left'></i>", "<i class='las la-long-arrow-alt-right'></i>"],
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        items: 1,
+        center: true,
+        autoplayHoverPause: true,
         responsiveClass: true,
         responsive: {
             0: {
                 items: 1,
+            },
+            1000: {
+                items: 3
             }
         }
     });
 
+    // News Slider 
+    $(".news-slider").owlCarousel({
+        nav: true,
+        loop: true,
+        navText: ["<i class='las la-long-arrow-alt-left'></i>", "<i class='las la-long-arrow-alt-right'></i>"],
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        items: 1,
+        center: true,
+        autoplayHoverPause: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
 
-    // Single Slider
+    // Clients Slider 
+    $(".clients-slider").owlCarousel({
+        nav: false,
+        loop: true,
+        navText: ["<i class='las la-long-arrow-alt-left'></i>", "<i class='las la-long-arrow-alt-right'></i>"],
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        items: 1,
+        center: false,
+        autoplayHoverPause: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            767: {
+                items: 3
+            },
+            1000: {
+                items: 6
+            }
+        }
+    });
+
+    // Single Slider 
     $(".single-slider").owlCarousel({
         nav: true,
         loop: true,
-        navText: ["<i class='la la-arrow-left'></i>", "<i class='la la-arrow-right'></i>"],
+        navText: ["<i class='las la-long-arrow-alt-left'></i>", "<i class='las la-long-arrow-alt-right'></i>"],
         dots: true,
-        autoplay: 4000,
+        autoplay: true,
+        autoplayTimeout: 5000,
         items: 1,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        autoplayHoverPause: true,
         center: false,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
-            }
-        }
-    });
-
-    // Pro Slider 
-    $(".pro-slider").owlCarousel({
-        nav: false,
-        loop: true,
-        navText: ["<i class='la la-arrow-left'></i>", "<i class='la la-arrow-right'></i>"],
-        dots: false,
-        autoplay: 4000,
-        items: 1,
         autoplayHoverPause: true,
         responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            600: {
-                items: 2,
-            },
-            1000: {
-                items: 4
-            }
-        }
     });
-
-    // Pro Slider In
-    $(".pro-slider-in").owlCarousel({
-        nav: true,
-        loop: false,
-        navText: ["<i class='la la-arrow-left'></i>", "<i class='la la-arrow-right'></i>"],
-        dots: false,
-        autoplay: 4000,
-        items: 1,
-        autoplayHoverPause: true,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            600: {
-                items: 2,
-            },
-            1000: {
-                items: 4
-            }
-        }
-    });
-
-    // Pro Slider 
-    $(".pro-slider").owlCarousel({
-        nav: true,
-        loop: true,
-        navText: ["<i class='la la-angle-left'></i>", "<i class='la la-angle-right'></i>"],
-        dots: false,
-        autoplay: 4000,
-        items: 1,
-        autoplayHoverPause: true,
-        center: false,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                center: false,
-                items: 1,
-            },
-            600: {
-                center: false,
-                items: 2
-            },
-            1000: {
-                items: 4
-            }
-        }
-    });
-
-
-    // Team Slider
-    $(".team-slider").owlCarousel({
-        nav: false,
-        loop: false,
-        navText: ["<i class='la la-angle-left'></i>", "<i class='la la-angle-right'></i>"],
-        dots: true,
-        autoplay: 4000,
-        items: 1,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        autoplayHoverPause: true,
-        center: false,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            600: {
-                items: 2,
-            },
-            1000: {
-                items: 4,
-            }
-        }
-    });
-
-    // Gallery Slider 
-    $(".gallery-slider").owlCarousel({
-        nav: true,
-        loop: true,
-        navText: ["<i class='la la-angle-left'></i>", "<i class='la la-angle-right'></i>"],
-        dots: false,
-        autoplay: 4000,
-        items: 1,
-        autoplayHoverPause: true,
-        center: true,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                center: false,
-                items: 2,
-            },
-            600: {
-                center: false,
-                items: 3
-            },
-            1000: {
-                items: 5
-            }
-        }
-    });
-
-    // Part Slider 
-    $(".part-slider").owlCarousel({
-        nav: false,
-        loop: true,
-        navText: ["<i class='la la-angle-left'></i>", "<i class='la la-angle-right'></i>"],
-        dots: false,
-        autoplay: 4000,
-        items: 1,
-        autoplayHoverPause: true,
-        center: true,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                center: false,
-                items: 2,
-            },
-            600: {
-                center: false,
-                items: 3
-            },
-            1000: {
-                items: 5
-            }
-        }
-    });
-
-
-    $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
-    });
-    $('.slider-nav').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        vertical: true,
-        arrows: false,
-        asNavFor: '.slider-for',
-        dots: false,
-        focusOnSelect: true,
-        verticalSwiping: true,
-        responsive: [{
-                breakpoint: 992,
-                settings: {
-                    vertical: false,
-                    slidesToShow: 4,
-                }
-            },
-            {
-                breakpoint: 380,
-                settings: {
-                    vertical: false,
-                    slidesToShow: 3,
-                }
-            }
-        ]
-    });
-
 
     //Nav
     $(window).on("scroll", function() {
@@ -259,21 +131,7 @@ $(document).ready(function() {
         }
     });
 
-    /* --------------------------------------------
-    Search
-    --------------------------------------------- */
-    if ($('.search-box-outer').length) {
-        $('.search-box-outer').on('click', function() {
-            $('body').addClass('search-active');
-        });
-        $('.close-search').on('click', function() {
-            $('body').removeClass('search-active');
-        });
-    }
-
-    /* --------------------------------------------
-     Mobile Menu
-    --------------------------------------------- */
+    // Mobile Menu
     if ($('.mobile-menu').length) {
 
         $('.mobile-menu .menu-box');
@@ -294,17 +152,130 @@ $(document).ready(function() {
 
     }
 
-    /* --------------------------------------------
-     Drop
-    --------------------------------------------- */
-    $('.mobile-menu li.menu-item-has-children').on('click', function(event) {
-        $(this).siblings().removeClass('open');
-        $(this).toggleClass('open');
-    });
+    //Drop
+    (function($) {
 
-    /* --------------------------------------------
-     Odometer
-    --------------------------------------------- */
+        // Reverse
+        // =============================================
+        $.fn.reverse = [].reverse;
+
+        // jQuery Extended Family Selectors
+        // =============================================
+        $.fn.cousins = function(filter) {
+            return $(this).parent().siblings().children(filter);
+        };
+
+        $.fn.piblings = function(filter) {
+            return $(this).parent().siblings(filter);
+        };
+
+        $.fn.niblings = function(filter) {
+            return $(this).siblings().children(filter);
+        };
+
+        // Update
+        // =============================================
+        $.fn.update = function() {
+            return $(this);
+        };
+
+        // Dropdown
+        // =============================================
+        $.fn.dropdown = function(options) {
+
+            // Store object
+            var $this = $(this);
+
+            // Settings
+            var settings = $.extend({
+                className: 'toggled',
+            }, options);
+
+            // Simplify variable names
+            var className = settings.className;
+
+            // List selectors
+            var $ul = $this.find('ul'),
+                $li = $this.find('li'),
+                $a = $this.find('a');
+
+            // Menu selectors
+            var $drawers = $a.next($ul), // All unordered lists after anchors are drawers
+                $buttons = $drawers.prev($a), // All anchors previous to drawers are buttons
+                $links = $a.not($buttons); // All anchors that are not buttons are links
+
+            // Toggle menu on-click
+            $buttons.on('click', function() {
+                var $button = $(this),
+                    $drawer = $button.next($drawers),
+                    $piblingDrawers = $button.piblings($drawers);
+
+                // Toggle button and drawer
+                $button.toggleClass(className);
+                $drawer.toggleClass(className).css('height', '');
+
+                // Reset children
+                $drawer.find($buttons).removeClass(className);
+                $drawer.find($drawers).removeClass(className).css('height', '');
+
+                // Reset cousins
+                $piblingDrawers.find($buttons).removeClass(className);
+                $piblingDrawers.find($drawers).removeClass(className).css('height', '');
+
+                // Animate height auto
+                $drawers.update().reverse().each(function() {
+                    var $drawer = $(this);
+                    if ($drawer.hasClass(className)) {
+                        var $clone = $drawer.clone().css('display', 'none').appendTo($drawer.parent()),
+                            height = $clone.css('height', 'auto').height() + 'px';
+                        $clone.remove();
+                        $drawer.css('height', '').css('height', height);
+                    } else {
+                        $drawer.css('height', '');
+                    }
+                });
+            });
+
+            // Close menu
+            function closeMenu() {
+                $buttons.removeClass(className);
+                $drawers.removeClass(className).css('height', '');
+            }
+
+            // Close menu after link is clicked
+            $links.click(function() {
+                closeMenu();
+            });
+
+            // Close menu when off-click and focus-in
+            $(document).on('click focusin', function(event) {
+                if (!$(event.target).closest($buttons.parent()).length) {
+                    closeMenu();
+                }
+            });
+        };
+    })(jQuery);
+
+    $('.mobile-menu').dropdown();
+
+    //Header Search
+    if ($('.search-box-outer').length) {
+        $('.search-box-outer').on('click', function() {
+            $('body').addClass('search-active');
+        });
+        $('.close-search').on('click', function() {
+            $('body').removeClass('search-active');
+        });
+    }
+    // Select
+    $('select').niceSelect();
+
+    // FancyBox
+    $('[data-fancybox="gallaryPhoto"]').fancybox();
+    $('[data-fancybox="gallaryVideo"]').fancybox();
+    $('[data-fancybox]').fancybox();
+
+    //Odometer
     $(".counter-item").each(function() {
         $(this).isInViewport(function(status) {
             if (status === "entered") {
@@ -316,172 +287,121 @@ $(document).ready(function() {
         });
     });
 
-
-    /* --------------------------------------------
-     Select
-    --------------------------------------------- */
-    $('select').niceSelect();
-
-
-    /* --------------------------------------------
-     FancyBox
-    --------------------------------------------- */
-    $('[data-fancybox="gallaryPhoto"]').fancybox();
-    $('[data-fancybox="gallaryVideo"]').fancybox();
-    $('[data-fancybox]').fancybox();
-
-    /* --------------------------------------------
-     for upload file
-    --------------------------------------------- */
-
-    $(document).on('change', ':file', function() {
-        var input = $(this),
-            numFiles = input.get(0).files ? input.get(0).files.length : 1,
-            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-        input.trigger('fileselect', [numFiles, label]);
-    });
-    $(':file').on('fileselect', function(event, numFiles, label) {
-
-        var input = $(this).parents('.input-group').find(':text'),
-            log = numFiles > 1 ? numFiles + ' files selected' : label;
-
-        if (input.length) {
-            input.val(log);
-        } else {
-            //            if (log) alert(log);
-        }
-    });
-
-    $('.form-control').focus(function() {
-        $(this).parents('.form-group').addClass('focused');
-    });
-
-    $('.form-control').blur(function() {
-        var inputValue = $(this).val();
-        if (inputValue == "") {
-            $(this).removeClass('filled');
-            $(this).parents('.form-group').removeClass('focused');
-        } else {
-            $(this).addClass('filled');
-        }
-    });
-    $(document).on('change', '.btn-file :file', function() {
-        var fileName = $('#uploadfile').val();
-        $('.filename').val(fileName);
-    });
-
-    /* --------------------------------------------
-    Phone
-    --------------------------------------------- */
-    $(".phone").intlTelInput({
-        preferredCountries: ["sa", "gb"],
-        separateDialCode: true,
-        hiddenInput: "full",
-    });
-
-    /* --------------------------------------------
-    Show Password
-    --------------------------------------------- */
-
-    $(".toggle-password").click(function() {
-        $(this).toggleClass("la-eye la-eye-slash");
-        var input = $($(this).attr("toggle"));
-        if (input.attr("type") == "password") {
-            input.attr("type", "text");
-        } else {
-            input.attr("type", "password");
-        }
-    });
-
-    /* --------------------------------------------
-    RangeInput
-    --------------------------------------------- */
-
-    if ($('.custom-range-slider').length > 0) {
-        $(".custom-range-slider").ionRangeSlider({});
-    }
-
-
-    /* ---------------------------------------------
-     Scrool To Top Button Function
-    --------------------------------------------- */
+    // Rotate
+    var header = $('header');
+    var body = $('body');
+    var hieghtThreshold = $(".hoverSec").offset().top;
+    var hieghtThreshold_end = $(".hoverSec").offset().top + $(".hoverSec").height();
+    var hieghtThreshold2 = $(".hoverThr").offset().top;
+    var hieghtThreshold_end2 = $(".hoverThr").offset().top + $(".hoverThr").height();
+    var hieghtThreshold3 = $(".hoverFor").offset().top;
+    var hieghtThreshold_end3 = $(".hoverFor").offset().top + $(".hoverFor").height();
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 500) {
-            $(".toTop").addClass("active");
+        var scroll = $(window).scrollTop();
+        var scroll2 = $(window).scrollTop();
+        var scroll3 = $(window).scrollTop();
+
+        if (scroll >= hieghtThreshold && scroll) {
+            body.addClass('rotate');
         } else {
-            $(".toTop").removeClass("active");
+            body.removeClass('rotate');
+        }
+
+        if (scroll2 >= hieghtThreshold2 && scroll2) {
+            body.addClass('rotate2');
+        } else {
+            body.removeClass('rotate2');
+        }
+
+        if (scroll3 >= hieghtThreshold3 && scroll3) {
+            body.addClass('rotate3');
+        } else {
+            body.removeClass('rotate3');
         }
     });
-
-    $(".toTop").click(function() {
-        $("html,body").animate({
-            scrollTop: 0
-        }, 500);
-        return false;
-    });
-
-    $('.marquee').marquee({
-        duration: 15000,
-        gap: 50,
-        delayBeforeStart: 0,
-        duplicated: true,
-        pauseOnHover: true
-    });
-
 });
 
+function revolveText(options = {
+    target: undefined,
+    span: 100,
+    north: 0,
+    spiral: false
+}) {
+    const {
+        target,
+        span,
+        north,
+        spiral,
+        size
+    } = options;
+    const message = target.textContent;
+    const quaterWidth = target.clientWidth / 4;
+    const diameter = size || quaterWidth;
+    const messageChunks = message.split(String());
+    const { length } = messageChunks;
+    const offsetEnd = 1;
+    const l = length + offsetEnd;
+    const CIRC_MAX = 360;
+    const PERC_MAX = 100;
+    const ofDeg = span * CIRC_MAX / PERC_MAX;
+    const ofNorth = north * CIRC_MAX / PERC_MAX;
+    const segDeg = ofDeg / l;
+    const fontSize = 16;
+    let a = 0;
+    let i = 0;
 
-/* ---------------------------------------------
- image Parallax
---------------------------------------------- */
-(function($) {
-    var parallax = -0.5;
-
-    var $bg_images = $(".parallax-image");
-    var offset_tops = [];
-    $bg_images.each(function(i, el) {
-        offset_tops.push($(el).offset().top);
-    });
-
-    $(window).scroll(function() {
-        var dy = $(this).scrollTop();
-        $bg_images.each(function(i, el) {
-            var ot = offset_tops[i];
-            $(el).css("background-position", "-50% " + (dy - ot) * parallax + "px");
-        });
-    });
-})(jQuery);
-
-
-// bg
-var lFollowX = 0,
-    lFollowY = 0,
-    x = 0,
-    y = 0,
-    friction = 1 / 30;
-
-function moveBackground() {
-    x += (lFollowX - x) * friction;
-    y += (lFollowY - y) * friction;
-
-    translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
-
-    $('.animation-h .icon').css({
-        '-webit-transform': translate,
-        '-moz-transform': translate,
-        'transform': translate
-    });
-
-    window.requestAnimationFrame(moveBackground);
+    target.setAttribute('style', `
+		padding-left: ${diameter / 2}px;
+		display: inline-block;
+		width: ${diameter / 2}px;
+		height: ${diameter}px;
+		transform: rotate3d(0, 0, 1, -${segDeg + ofNorth}deg);
+		border-radius: 9e9em;
+		font-size: 1rem;
+	`);
+    target.classList.add('fx-Revolve');
+    target.textContent = '';
+    while (a < ofDeg) {
+        a += segDeg;
+        const charWrapper = document.createElement('span');
+        charWrapper.textContent = messageChunks[i];
+        i++;
+        charWrapper.classList.add('fx-RevolveCharWrap');
+        charWrapper.setAttribute('style', `
+			display: inline-block;
+			transform: 
+				rotate3d(0, 0, 1, ${a}deg) 
+				${spiral ? 'translateY(' + (i) + 'px)': ''};
+			${spiral ? 'font-size:' + (fontSize - (i / 10) ) + 'px': ''};
+			position: absolute;
+			height: ${diameter / 2}px;
+			transform-origin: bottom left;
+			font-size: 1em;
+		`);
+        target.appendChild(charWrapper);
+    }
 }
 
-$(window).on('mousemove click', function(e) {
 
-    var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
-    var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
-    lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
-    lFollowY = (10 * lMouseY) / 100;
 
+revolveText({
+    target: document.querySelector('.hoverSec .anim-inner h6'),
+    span: 50, // percent
+    north: 0, // cc rotate in percent
+    spiral: false,
+    size: 200 // fixed size
 });
-
-moveBackground();
+revolveText({
+    target: document.querySelector('.hoverThr .anim-inner h6'),
+    span: 50, // percent
+    north: 0, // cc rotate in percent
+    spiral: false,
+    size: 200 // fixed size
+});
+revolveText({
+    target: document.querySelector('.hoverFor .anim-inner h6'),
+    span: 50, // percent
+    north: 0, // cc rotate in percent
+    spiral: false,
+    size: 200 // fixed size
+});
