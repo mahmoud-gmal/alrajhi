@@ -1,0 +1,451 @@
+@media (max-width: 1200px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 991px) {
+    .col,
+    .col-1,
+    .col-10,
+    .col-11,
+    .col-12,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-auto,
+    .col-lg,
+    .col-lg-1,
+    .col-lg-10,
+    .col-lg-11,
+    .col-lg-12,
+    .col-lg-2,
+    .col-lg-3,
+    .col-lg-4,
+    .col-lg-5,
+    .col-lg-6,
+    .col-lg-7,
+    .col-lg-8,
+    .col-lg-9,
+    .col-lg-auto,
+    .col-md,
+    .col-md-1,
+    .col-md-10,
+    .col-md-11,
+    .col-md-12,
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9,
+    .col-md-auto,
+    .col-sm,
+    .col-sm-1,
+    .col-sm-10,
+    .col-sm-11,
+    .col-sm-12,
+    .col-sm-2,
+    .col-sm-3,
+    .col-sm-4,
+    .col-sm-5,
+    .col-sm-6,
+    .col-sm-7,
+    .col-sm-8,
+    .col-sm-9,
+    .col-sm-auto,
+    .col-xl,
+    .col-xl-1,
+    .col-xl-10,
+    .col-xl-11,
+    .col-xl-12,
+    .col-xl-2,
+    .col-xl-3,
+    .col-xl-4,
+    .col-xl-5,
+    .col-xl-6,
+    .col-xl-7,
+    .col-xl-8,
+    .col-xl-9,
+    .col-xl-auto {
+        width: 100%;
+        max-width: 100%;
+        flex: auto;
+    }
+    header .header-inner .nav-menu {
+        display: none;
+    }
+    header .header-inner .menu-right {
+        max-width: 40%;
+        flex: 0 0 40%;
+    }
+    header .header-inner .menu-left {
+        max-width: 60%;
+        flex: 0 0 60%;
+    }
+    header .header-inner .menu-left .btn {
+        min-width: 100px;
+        font-size: 13px;
+        min-height: 35px;
+        line-height: 23px;
+    }
+    .mobile-nav-toggler {
+        display: block;
+        width: 35px;
+        height: 35px;
+        line-height: 38px;
+        margin-inline-end: 8px;
+    }
+    header .header-inner .menu-right a .icon {
+        width: 50px;
+        height: 76px;
+    }
+    header .header-inner .menu-right a .text-logo {
+        width: calc(100% - 50px);
+        padding-inline-start: 10px;
+    }
+    header .header-inner .menu-right a .text-logo h3 {
+        font-size: 15px;
+        line-height: 24px;
+    }
+    header .header-inner .menu-right a .text-logo h4 {
+        font-size: 10px;
+        line-height: 14px;
+    }
+    .banner-home,
+    .banner-home .row {
+        min-height: 568px;
+    }
+    .about-h {
+        padding: 50px 0;
+    }
+    .img-about {
+        margin-top: 30px;
+    }
+    .products-h {
+        padding: 50px 0 150px;
+    }
+    .title {
+        margin: 0 0 30px;
+    }
+    .contact-text {
+        padding: 30px 20px;
+    }
+    .contact-text p {
+        font-size: 22px;
+        line-height: 37px;
+    }
+    .contact-text .callNow .icon {
+        font-size: 40px;
+        width: 40px;
+    }
+    .contact-text .callNow .details {
+        width: calc(100% - 40px);
+        padding-inline-start: 15px;
+    }
+    .contact-text .callNow .details h4 {
+        font-size: 18px;
+        line-height: 30px;
+        margin: 0;
+    }
+    .contact-text .callNow .details h3 {
+        font-size: 18px;
+        margin: 0;
+    }
+    .categories-h {
+        padding: 50px 0;
+    }
+    .footer-col h3 {
+        margin: 28px 0;
+    }
+    .footer-top .col-md-6.col-sm-12 {
+        max-width: 50%;
+    }
+    .footer-botto {
+        text-align: center;
+        padding: 0 0 16px;
+    }
+    .ryad-logo {
+        float: none;
+        margin: 10px 0 0;
+    }
+    .footer-top {
+        padding: 40px 0 30px;
+    }
+    .logo-f {
+        text-align: start;
+    }
+    .logo-f a .icon {
+        margin: 0;
+    }
+    .breadcrumb {
+        height: 250px;
+    }
+    .breadcrumb .text-bread h2 {
+        font-size: 25px;
+        line-height: 35px;
+        margin: 0 0 10px;
+    }
+    .breadcrumb .text-bread ul li a,
+    .breadcrumb .text-bread ul li span {
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .img-about.img-in .img {
+        width: 290px;
+        height: 290px;
+    }
+    .img-about.img-in::after {
+        width: 300px;
+        height: 300px;
+        right: -2px;
+        top: -10px;
+    }
+    .img-about.img-in {
+        min-height: 300px;
+    }
+    .why-inner .why-block {
+        width: 216px;
+        height: 216px;
+        margin: 0;
+    }
+    .why-inner .why-block .counter-item {
+        font-size: 50px;
+        line-height: 75px;
+    }
+    .why-inner .why-block p {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .why-inner .text-why {
+        width: 100%;
+        padding: 30px 0 0;
+    }
+    .why-inner .text-why h3 {
+        font-size: 25px;
+        line-height: 40px;
+        margin: 0 0 10px;
+    }
+    .why-inner .text-why p {
+        margin: 15px 0;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .counter-h .row {
+        padding: 30px;
+    }
+    .count-block {
+        margin: 15px 0;
+    }
+    .counter-h {
+        padding: 40px 0;
+    }
+    .team-h {
+        padding: 10px 0 50px;
+    }
+    .serv-block .details .btn {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    .nav-pills .nav-item {
+        width: 100%;
+        margin: 5px 0;
+    }
+    .products-rate {
+        padding: 0 0 50px;
+    }
+    .form-con {
+        margin: 0 0 30px;
+    }
+    .img-con::after {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 767px) {}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%;
+    }
+    header .header-inner .menu-right,
+    header .header-inner .menu-left {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+    .banner-home .text-banner p {
+        font-size: 25px;
+        line-height: 1.7;
+    }
+    .text-about h3 {
+        font-size: 25px;
+        line-height: 40px;
+        margin: 0 0 20px;
+    }
+    .text-about p {
+        margin: 20px 0;
+        font-size: 14px;
+        line-height: 24px;
+        max-height: 96px;
+    }
+    .text-about ul li {
+        font-size: 14px;
+        line-height: 24px;
+        padding-inline-start: 20px;
+        margin: 5px 0;
+        flex: auto;
+        max-width: 100%;
+        padding-inline-end: 10px;
+    }
+    .text-about ul li::before {
+        font-size: 17px;
+    }
+    .img-about {
+        min-height: 350px;
+    }
+    .img-about .img {
+        width: 45%;
+        height: 300px;
+    }
+    .img-about::before {
+        width: 273px;
+        height: 273px;
+    }
+    .img-about::after {
+        width: 202px;
+        height: 202px;
+    }
+    .title h3 {
+        font-size: 25px;
+        line-height: 41px;
+    }
+    .title p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .btn.btn-center {
+        margin: 30px auto 0;
+    }
+    .contact-text {
+        /* text-align: center; */
+    }
+    .contact-text .callNow .details {
+        width: auto;
+        text-align: start;
+    }
+    .contact-text .callNow {
+        /* justify-content: center; */
+    }
+    .logo-f a .icon {
+        max-width: 66px;
+        max-height: 66px;
+    }
+    .logo-f a .text-logo {
+        padding: 10px 0 0;
+    }
+    .logo-f a .text-logo h3 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .logo-f a .text-logo h4 {
+        font-size: 11px;
+    }
+    .footer-col h3 {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 500px) {}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 0;
+    }
+    header .header-inner .menu-left .btn {
+        min-width: 70px;
+        font-size: 10px;
+        min-height: 30px;
+        line-height: 30px;
+        height: auto;
+        padding: 0 5px;
+    }
+    .mobile-nav-toggler {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    header .header-inner .menu-right a .text-logo h3 {
+        font-size: 12px;
+    }
+    header .header-inner .menu-right a .text-logo h4 {
+        font-size: 8px;
+    }
+    header .header-inner .menu-right a .icon {
+        width: 40px;
+        height: 55px;
+    }
+    header .header-inner {
+        padding: 10px;
+    }
+    header .header-inner .menu-right a .text-logo {
+        width: calc(100% - 40px);
+        padding-inline-start: 8px;
+    }
+    header .header-inner .menu-right {
+        max-width: 55%;
+        flex: 0 0 55%;
+    }
+    header .header-inner .menu-left {
+        max-width: 45%;
+        flex: 0 0 45%;
+    }
+    .banner-home,
+    .banner-home .row {
+        min-height: 450px;
+    }
+    .banner-home .text-banner {
+        padding: 0 0 90px;
+    }
+    .banner-home .text-banner p {
+        font-size: 20px;
+    }
+    .cat-block {
+        height: 350px;
+    }
+}
+
+@media (max-width: 390px) {
+    .footer-top .col-md-6.col-sm-12 {
+        max-width: 100%;
+    }
+    .img-about .img {
+        height: 220px;
+    }
+    .img-about {
+        min-height: 290px;
+    }
+    .img-about::before {
+        width: 254px;
+        height: 254px;
+    }
+    .img-about::after {
+        width: 182px;
+        height: 182px;
+    }
+}
+
+@media (max-width: 360px) {}

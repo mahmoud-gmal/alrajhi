@@ -1,0 +1,57 @@
+html,
+body {
+    direction: ltr;
+}
+
+.brands-slider .owl-nav {
+    left: auto;
+    right: 0;
+}
+
+.banner-home .text-banner {
+    direction: ltr;
+}
+
+.img-about .img.img-one {
+    left: auto;
+    right: 0;
+}
+
+.text-about ul li::before {
+    right: auto;
+    left: 0;
+}
+
+.pro-block {
+    direction: ltr;
+}
+
+.contact-text .callNow .details h3 {
+    justify-content: flex-start;
+}
+
+.ryad-logo {
+    float: right;
+}
+
+.mobile-menu .close-btn {
+    left: auto;
+    right: 15px;
+}
+
+.breadcrumb .text-bread ul li a::after {
+    left: auto;
+    right: -4px;
+}
+
+.team-block {
+    direction: ltr;
+}
+
+.la.la-long-arrow-alt-left {
+    transform: scaleX(-1);
+}
+
+form {
+    direction: ltr;
+}
