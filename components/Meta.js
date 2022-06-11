@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import { server } from "../config";
-import parse from 'html-react-parser';
-const Meta = ({ yoast, title }) => {
+const Meta = ({ title }) => {
   return (
     <>
     <Head>
