@@ -1,7 +1,5 @@
 
-const Footer = () => {
-
-     
+const Footer = () => { 
 
   return (
 <>FOOTER</>
