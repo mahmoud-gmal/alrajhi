@@ -2,7 +2,7 @@
 const Footer = () => { 
 
   return (
-<>FOOTER</>
+<>hima footer</>
 
   )
 };
